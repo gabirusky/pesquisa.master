@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Banco Master - Anatomia de um Colapso Sistêmico</title>
+    <meta name="description"
+        content="Análise completa do caso Banco Master: fraude bilionária, engenharia financeira ilícita e impacto no sistema financeiro brasileiro.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-900">
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav hidden lg:block">
+        <a href="#intro" class="nav-item active">Introdução</a>
+        <a href="#origem" class="nav-item">Origem do Banco</a>
+        <a href="#modelo" class="nav-item">Modelo de Negócio</a>
+        <a href="#fraude" class="nav-item">Engenharia da Fraude</a>
+        <a href="#lavagem" class="nav-item">Lavagem de Dinheiro</a>
+        <a href="#cronologia" class="nav-item">Cronologia</a>
+        <a href="#guerra" class="nav-item">Guerra Institucional</a>
+        <a href="#impactos" class="nav-item">Impactos</a>
+        <a href="#conclusao" class="nav-item">Conclusão</a>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6">
+
+        <!-- HERO SECTION -->
+        <section id="intro" class="min-h-screen flex flex-col justify-center pt-20">
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-2 bg-red-500/20 text-red-400 rounded-full text-sm font-medium mb-6">
+                    ⚠️ Liquidação Extrajudicial - Nov/2025
+                </span>
+                <img src="Banco_Master_logo.png" alt="Banco Master" class="h-24 md:h-32 mx-auto mb-6 logo-glow">
+                <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
+                    Anatomia de um Colapso Sistêmico no Sistema Financeiro Nacional
+                </p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="glass-card stat-card">
+                    <div class="stat-value">R$ 12,2 bi</div>
+                    <div class="stat-label">Operações Suspeitas</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-value">R$ 6,7 bi</div>
+                    <div class="stat-label">Créditos Falsos</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Fundos Investigados</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-value">R$ 102 bi</div>
+                    <div class="stat-label">Patrimônio em Fundos</div>
+                </div>
+            </div>
+
+            <!-- Simple Summary -->
+            <div class="glass-card p-8 mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-purple-400">📋 Resumo Simplificado</h2>
+                <p class="text-slate-300 mb-4">
+                    O <strong class="text-white">Banco Master</strong> era uma instituição financeira que prometia
+                    rendimentos muito acima do mercado (até 140% do CDI) para atrair investidores. Na prática,
+                    funcionava como um <strong class="text-red-400">esquema de pirâmide</strong>: usava o dinheiro de
+                    novos
+                    investidores para pagar os antigos.
+                </p>
+                <p class="text-slate-300 mb-4">
+                    Para esconder o rombo, o banco <strong class="text-yellow-400">fabricava créditos falsos</strong>
+                    através de empresas de fachada e vendia esses "ativos podres" para o banco público BRB. Além disso,
+                    usava fundos de investimento para lavar dinheiro — alguns dos mesmos fundos utilizados pelo crime
+                    organizado (PCC).
+                </p>
+                <p class="text-slate-300">
+                    Em <strong class="text-white">novembro de 2025</strong>, o Banco Central decretou a liquidação
+                    extrajudicial. O dono, <strong class="text-white">Daniel Vorcaro</strong>, foi preso tentando fugir
+                    para Dubai.
+                </p>
+            </div>
+
+            <!-- Visual Timeline Summary -->
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-bold mb-6 text-purple-400">📅 Linha do Tempo Resumida</h3>
+                <div class="flex flex-wrap justify-between items-center gap-4 text-center">
+                    <div class="flex-1 min-w-[120px]">
+                        <div class="text-2xl font-bold text-blue-400">2016</div>
+                        <div class="text-sm text-slate-400">Vorcaro adquire Banco Máxima</div>
+                    </div>
+                    <div class="text-slate-600">→</div>
+                    <div class="flex-1 min-w-[120px]">
+                        <div class="text-2xl font-bold text-purple-400">2021</div>
+                        <div class="text-sm text-slate-400">Rebranding: nasce Banco Master</div>
+                    </div>
+                    <div class="text-slate-600">→</div>
+                    <div class="flex-1 min-w-[120px]">
+                        <div class="text-2xl font-bold text-yellow-400">Set/2025</div>
+                        <div class="text-sm text-slate-400">BC veta compra pelo BRB</div>
+                    </div>
+                    <div class="text-slate-600">→</div>
+                    <div class="flex-1 min-w-[120px]">
+                        <div class="text-2xl font-bold text-red-400">Nov/2025</div>
+                        <div class="text-sm text-slate-400">Liquidação e prisão</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ORIGEM -->
+        <section id="origem" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">2. Gênese e Metamorfose: Do Banco Máxima à Era Vorcaro
+            </h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">2.1 O Legado do Banco Máxima</h3>
+                <p class="text-slate-300 mb-4">Fundado na década de 1970, o Banco Máxima operou por décadas como uma
+                    instituição tradicional focada no crédito imobiliário. Sob o controle da família Sabbá, o banco
+                    construiu uma reputação de nicho.</p>
+                <p class="text-slate-300 mb-4">Em meados de 2016, o banco encontrava-se em situação pré-falimentar. A
+                    gestão da época havia acumulado prejuízos operacionais significativos e enfrentava dificuldades para
+                    cumprir os índices de Basileia exigidos pelo Banco Central.</p>
+                <div class="alert alert-danger">
+                    <strong>Situação crítica:</strong> Altos índices de inadimplência, passivos judiciais e pressão do
+                    regulador para venda ou liquidação compulsória.
+                </div>
+            </div>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">2.2 A Ascensão de Daniel Vorcaro</h3>
+                <p class="text-slate-300 mb-4"><strong class="text-white">Daniel Vorcaro</strong>, jovem investidor
+                    mineiro na faixa dos 30 anos, viu no moribundo Banco Máxima uma oportunidade de entrada no restrito
+                    clube dos banqueiros brasileiros.</p>
+                <p class="text-slate-300 mb-4">Com raízes no setor imobiliário através do <strong
+                        class="text-white">Grupo Multipar</strong> — fundado por seu pai, Henrique Vorcaro —, Daniel
+                    possuía capital e ambição, mas pouca experiência na complexa regulação bancária.</p>
+                <p class="text-slate-300">A negociação iniciou em 2016, mas o processo regulatório foi extenuante. A
+                    transferência de controle só foi concluída em 2018. Vorcaro descreveu esse processo como um
+                    verdadeiro "calvário".</p>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">2.3 O Rebranding: Nascimento do "Banco Master"
+                    (2021)</h3>
+                <p class="text-slate-300 mb-4">Em agosto de 2021, a marca "Máxima" foi sepultada. Nascia o "Banco
+                    Master".</p>
+                <p class="text-slate-300 mb-4">O banco apresentava-se como um banco múltiplo, digital e de investimento,
+                    com quatro frentes principais:</p>
+                <ul class="list-disc list-inside text-slate-300 space-y-2 ml-4">
+                    <li><strong class="text-white">Crédito Pessoal e Consignado:</strong> Foco no Norte e Nordeste</li>
+                    <li><strong class="text-white">Banco de Investimentos:</strong> M&A e estruturação de dívida</li>
+                    <li><strong class="text-white">Serviços Financeiros:</strong> Seguradora Kovr</li>
+                    <li><strong class="text-white">Banco Digital:</strong> Credcesta e Will Bank</li>
+                </ul>
+                <p class="text-slate-300 mt-4">A meta era atingir patrimônio líquido de R$ 1 bilhão até 2023 — um salto
+                    quântico para quem operava com R$ 30 milhões poucos anos antes.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MODELO DE NEGÓCIO -->
+        <section id="modelo" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">3. A Estratégia Financeira: O Modelo Insustentável</h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">3.1 A Armadilha do "Spread Negativo"</h3>
+                <p class="text-slate-300 mb-4">Para atrair recursos, o Master oferecia CDBs com remunerações
+                    exorbitantes: <strong class="text-red-400">130%, 140% e até taxas prefixadas muito acima da curva de
+                        juros</strong>.</p>
+
+                <div class="bg-slate-800/50 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-yellow-400 mb-3">💰 Análise do Custo de Captação:</h4>
+                    <ul class="text-slate-300 space-y-2">
+                        <li>• Selic a 12% → CDB de 140% do CDI custa <strong class="text-white">~16,8% ao ano</strong>
+                        </li>
+                        <li>• + Comissões das corretoras + impostos + operação</li>
+                        <li>• <strong class="text-red-400">Custo total: superior a 20% ao ano</strong></li>
+                    </ul>
+                </div>
+
+                <p class="text-slate-300">Para lucrar, o banco precisaria emprestar a taxas superiores a 25-30% com
+                    inadimplência zero. Isso não existia. O resultado: <strong class="text-red-400">spread
+                        negativo</strong> — o banco pagava mais do que recebia.</p>
+            </div>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">3.2 O Crescimento Artificial do Balanço</h3>
+                <p class="text-slate-300 mb-4">Os números reportados desafiavam a gravidade:</p>
+
+                <div class="grid md:grid-cols-3 gap-4 my-6">
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="text-sm text-slate-400">2018</div>
+                        <div class="text-xl font-bold text-blue-400">R$ 190 mi</div>
+                        <div class="text-xs text-slate-500">Receitas</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="text-sm text-slate-400">2020</div>
+                        <div class="text-xl font-bold text-purple-400">R$ 1 bi</div>
+                        <div class="text-xs text-slate-500">Receitas (+426%)</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="text-sm text-slate-400">1º Sem 2024</div>
+                        <div class="text-xl font-bold text-red-400">R$ 4,2 bi</div>
+                        <div class="text-xs text-slate-500">Patrimônio Líquido</div>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <strong>Fraude contábil:</strong> Investigações apontaram que esses lucros eram derivados da
+                    superavaliação de ativos ilíquidos e contabilização de carteiras de crédito fabricadas.
+                </div>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">3.3 A Fachada de Banco de Investimento</h3>
+                <p class="text-slate-300 mb-4">O Master posicionava-se agressivamente no mercado de M&A e distressed
+                    assets. Envolveu-se com empresas como Metalfrio, Veste S.A. (Restoque) e participações no setor
+                    esportivo.</p>
+                <p class="text-slate-300">Essa atuação servia a um duplo propósito: (1) adquirir ativos baratos e
+                    reavaliá-los por valores muito superiores no balanço, gerando "lucro contábil" imediato; (2) criar
+                    narrativa de expertise para atrair parceiros.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: ENGENHARIA DA FRAUDE -->
+        <section id="fraude" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">4. A Engenharia da Fraude: Operação Compliance Zero</h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">4.1 A "Fábrica de Créditos Fantasmas"</h3>
+                <p class="text-slate-300 mb-4">No centro do esquema estavam empresas como a <strong
+                        class="text-yellow-400">Tirreno Consultoria</strong> e a <strong class="text-yellow-400">Cartos
+                        Sociedade Direta de Crédito</strong>.</p>
+
+                <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-red-400 mb-3">⚠️ O Mecanismo Fraudulento:</h4>
+                    <ul class="text-slate-300 space-y-2">
+                        <li>1. Tirreno "originava" milhares de contratos de empréstimo consignado</li>
+                        <li>2. Esses empréstimos eram fictícios ou sem lastro documental</li>
+                        <li>3. Os créditos eram "vendidos" ao Banco Master</li>
+                        <li>4. O banco contabilizava bilhões em "Direitos Creditórios"</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-red-500/30">
+                        <span class="text-red-400 font-bold">Volume da fraude: R$ 6,7 bilhões em créditos
+                            inexistentes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">4.2 A Conexão BRB: O "Bailout" Oculto</h3>
+                <p class="text-slate-300 mb-4">O <strong class="text-white">Banco de Brasília (BRB)</strong>, sob gestão
+                    de Paulo Henrique Costa, tornou-se o principal comprador das carteiras problemáticas do Master.</p>
+
+                <div class="bg-slate-800/50 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-yellow-400 mb-3">🔄 Fluxo da Triangulação (R$ 12,2 bilhões):</h4>
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center">
+                        <div class="bg-slate-700/50 rounded-lg p-4 flex-1">
+                            <div class="text-2xl mb-2">🏭</div>
+                            <div class="font-semibold">Tirreno/Cartos</div>
+                            <div class="text-sm text-slate-400">Gera crédito falso</div>
+                        </div>
+                        <div class="text-2xl text-purple-400">→</div>
+                        <div class="bg-slate-700/50 rounded-lg p-4 flex-1">
+                            <div class="text-2xl mb-2">🏦</div>
+                            <div class="font-semibold">Banco Master</div>
+                            <div class="text-sm text-slate-400">Recebe o crédito</div>
+                        </div>
+                        <div class="text-2xl text-purple-400">→</div>
+                        <div class="bg-slate-700/50 rounded-lg p-4 flex-1">
+                            <div class="text-2xl mb-2">🏛️</div>
+                            <div class="font-semibold">BRB</div>
+                            <div class="text-sm text-slate-400">Compra por dinheiro vivo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <strong>Cessão sem coobrigação:</strong> O BRB comprou bilhões sem garantias adequadas de retorno.
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>Atualização:</strong> Em comunicado de novembro de 2025, o BRB afirmou ter recuperado cerca
+                    de R$ 10 bilhões das carteiras de crédito do Master através da execução de garantias e substituição
+                    de ativos antes da liquidação final.
+                </div>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">4.3 O Veto do Banco Central</h3>
+                <p class="text-slate-300 mb-4">Em 2024, o BRB anunciou a intenção de adquirir participação acionária no
+                    Master. O Banco Central <strong class="text-green-400">vetou a operação</strong> em setembro de
+                    2025.</p>
+                <p class="text-slate-300">O regulador percebeu que permitir a fusão seria contaminar irremediavelmente o
+                    banco público. Esse veto acelerou a crise de liquidez do Master, levando ao colapso.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: LAVAGEM -->
+        <section id="lavagem" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">5. A Lavanderia Financeira: Fundos, Reag DTVM e o PCC
+            </h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">5.1 A Rede de Fundos da Reag DTVM</h3>
+                <p class="text-slate-300 mb-4">O Banco Central identificou <strong class="text-white">seis fundos
+                        principais</strong> envolvidos no esquema, administrados pela Reag DTVM:</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-6">
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="font-semibold text-purple-400">Astralo 95</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="font-semibold text-purple-400">Reag Growth 95</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="font-semibold text-purple-400">Hans 95</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="font-semibold text-purple-400">Olaf 95</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="font-semibold text-purple-400">Maia 95</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-lg p-4 text-center">
+                        <div class="font-semibold text-purple-400">Anna</div>
+                    </div>
+                </div>
+
+                <p class="text-slate-300">Patrimônio líquido teórico conjunto: <strong class="text-yellow-400">R$ 102,4
+                        bilhões</strong></p>
+            </div>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">5.2 O Modus Operandi</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4 class="font-semibold text-white">1. Empréstimo Inicial</h4>
+                        <p class="text-slate-400">Banco Master concedia empréstimos a empresas parceiras ou de fachada
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-semibold text-white">2. Aporte no Fundo</h4>
+                        <p class="text-slate-400">Empresas usavam recursos para comprar cotas subordinadas dos fundos
+                            Reag</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-semibold text-white">3. Compra de Ativos Podres</h4>
+                        <p class="text-slate-400">Fundos compravam ativos de baixa liquidez do Master (cártulas do BESC,
+                            precatórios incertos, debêntures)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="font-semibold text-white">4. Superavaliação</h4>
+                        <p class="text-slate-400">Ativos eram adquiridos a preços inflados (ex: título de R$100
+                            negociado a R$1.000)</p>
+                    </div>
+                </div>
+
+                <p class="text-slate-300 mt-4">Volume financeiro em transações suspeitas: <strong
+                        class="text-red-400">R$ 11,5 bilhões</strong></p>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">5.3 A Conexão PCC: Operação Carbono Oculto</h3>
+
+                <div class="alert alert-danger mb-4">
+                    <strong>⚠️ ALERTA:</strong> Os mesmos fundos usados pelo Banco Master também eram utilizados pelo
+                    crime organizado (PCC) para lavar dinheiro do tráfico de combustíveis.
+                </div>
+
+                <p class="text-slate-300 mb-4">A <strong class="text-white">Operação Carbono Oculto</strong>
+                    (agosto/2025) desmantelou esquema de sonegação e lavagem no setor de combustíveis operado pelo crime
+                    organizado.</p>
+
+                <ul class="text-slate-300 space-y-2">
+                    <li>• <strong class="text-yellow-400">Fundos compartilhados:</strong> Recursos ilícitos injetados
+                        nos mesmos fundos Reag</li>
+                    <li>• <strong class="text-yellow-400">Ativos misturados:</strong> De participações no Atlético
+                        Mineiro a postos de gasolina apreendidos</li>
+                    <li>• <strong class="text-yellow-400">Lavagem cruzada:</strong> Dinheiro da fraude bancária
+                        misturado com dinheiro do narcotráfico</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CRONOLOGIA -->
+        <section id="cronologia" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">6. Cronologia do Colapso</h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">6.1 O Cerco Regulatório (2024 – Set/2025)</h3>
+                <p class="text-slate-300 mb-4">Ao longo de 2024, a fiscalização do BC intensificou o monitoramento. A
+                    discrepância entre crescimento do passivo e qualidade do ativo gerou alertas vermelhos.</p>
+                <p class="text-slate-300"><strong class="text-yellow-400">Setembro de 2025:</strong> O veto à compra
+                    pelo BRB foi o sinal definitivo. O mercado fechou as portas para o Master no interbancário.</p>
+            </div>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">6.2 A Semana Fatídica (Novembro 2025)</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="text-sm text-purple-400 font-semibold">17 de Novembro (Segunda-feira)</div>
+                        <h4 class="font-semibold text-white mt-1">A Última Cartada</h4>
+                        <p class="text-slate-400">Master anuncia intenção de venda para Fictor Holding por R$ 3 bilhões
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="text-sm text-purple-400 font-semibold">17 de Novembro (Noite)</div>
+                        <h4 class="font-semibold text-white mt-1">A Fuga Frustrada</h4>
+                        <p class="text-slate-400">Daniel Vorcaro vai a Guarulhos com destino a Dubai. PF o intercepta na
+                            pista e executa prisão preventiva.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="text-sm text-red-400 font-semibold">18 de Novembro (Terça-feira)</div>
+                        <h4 class="font-semibold text-white mt-1">A Liquidação</h4>
+                        <p class="text-slate-400">Gabriel Galípolo (BC) decreta Liquidação Extrajudicial. Fictor Holding
+                            suspende oficialmente a operação de compra. Paulo Henrique Costa é afastado do BRB.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">6.3 Batalha Jurídica (Dez/2025 – Jan/2026)</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="text-sm text-purple-400 font-semibold">28 de Novembro de 2025</div>
+                        <h4 class="font-semibold text-white mt-1">Habeas Corpus Concedido</h4>
+                        <p class="text-slate-400">TRF-1 concede HC. Prisão substituída por tornozeleira eletrônica e
+                            proibição de sair do país.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="text-sm text-purple-400 font-semibold">Dezembro de 2025</div>
+                        <h4 class="font-semibold text-white mt-1">Transferência para o STF</h4>
+                        <p class="text-slate-400">Defesa consegue transferir inquérito para o STF (citação de deputado
+                            com foro privilegiado).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="text-sm text-purple-400 font-semibold">Janeiro de 2026</div>
+                        <h4 class="font-semibold text-white mt-1">Relatoria Toffoli</h4>
+                        <p class="text-slate-400">Ministro Dias Toffoli assume o caso, mantém sigilo e convoca
+                            acareações entre os envolvidos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WILL BANK SUBSECTION -->
+            <div class="glass-card p-8 mt-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">6.4 O Colapso do Will Bank (Janeiro 2026)</h3>
+                <p class="text-slate-300 mb-4">O <strong class="text-white">Will Bank</strong> (Will Financeira S.A.),
+                    braço digital do conglomerado com cerca de <strong class="text-yellow-400">9 milhões de
+                        clientes</strong>, teve destino próprio após a queda da matriz.</p>
+
+                <div class="bg-slate-800/50 rounded-lg p-6 my-6">
+                    <h4 class="font-semibold text-yellow-400 mb-3">🛡️ Regime de Administração Especial Temporária
+                        (RAET)</h4>
+                    <p class="text-slate-300 mb-2">Após a liquidação do Master em 18/nov, o BC optou por colocar o Will
+                        Bank em <strong class="text-white">RAET</strong> — mantendo-o operante mas afastando seus
+                        administradores.</p>
+                    <ul class="text-slate-400 space-y-1 mt-2">
+                        <li>• <strong>Objetivo:</strong> Preservar o ativo digital para venda a outro player</li>
+                        <li>• <strong>Resultado:</strong> Após 2 meses de negociações, nenhum comprador firmou acordo
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="text-sm text-red-400 font-semibold">21 de Janeiro de 2026</div>
+                        <h4 class="font-semibold text-white mt-1">Liquidação Decretada</h4>
+                        <p class="text-slate-400">Gabriel Galípolo assina decreto de liquidação extrajudicial da Will
+                            Financeira e Will Holding. Bens de Vorcaro e outros administradores tornados indisponíveis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger mt-4">
+                    <strong>Impacto nos Clientes:</strong>
+                    <ul class="mt-2 space-y-1">
+                        <li>• Todas as operações do app (Pix, saques, cartão) paralisadas</li>
+                        <li>• FGC cobre até R$ 250 mil (limite consolidado com o Master)</li>
+                        <li>• Dívidas de clientes continuam válidas e devem ser pagas à massa liquidante</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: GUERRA INSTITUCIONAL -->
+        <section id="guerra" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">7. A Guerra Institucional</h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">7.1 A Controvérsia no TCU</h3>
+                <p class="text-slate-300 mb-4">Em janeiro de 2026, o Ministro <strong class="text-white">Jhonatan de
+                        Jesus</strong> (TCU) determinou uma inspeção de "máxima urgência" no Banco Central sobre o caso.
+                </p>
+
+                <div class="alert alert-info">
+                    <strong>Desdobramento:</strong> Após alertas sobre risco sistêmico, o próprio ministro suspendeu a
+                    inspeção a pedido do BC e submeteu o caso ao plenário do TCU, recuando da medida monocrática.
+                </div>
+
+                <p class="text-slate-300 mt-4">A medida inicial gerou apreensão no mercado. Especialistas alertaram que
+                    qualquer tentativa de reverter a liquidação seria tecnicamente inviável e criaria precedente
+                    perigoso para a autonomia do BC.</p>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">7.2 As Conexões Políticas</h3>
+                <p class="text-slate-300 mb-4">Daniel Vorcaro construiu extensa teia de influência em Brasília:</p>
+
+                <ul class="text-slate-300 space-y-3">
+                    <li>• <strong class="text-yellow-400">Consultores de luxo:</strong> Ricardo Lewandowski, Henrique
+                        Meirelles e Guido Mantega foram sondados para consultorias</li>
+                    <li>• <strong class="text-yellow-400">Polêmica com Alexandre de Moraes:</strong> Esposa do ministro
+                        teria contrato advocatício com o banco</li>
+                    <li>• <strong class="text-yellow-400">Influenciadores e mídia:</strong> Patrocínio a Esfera Brasil,
+                        Lide e influenciadores digitais</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 8: IMPACTOS -->
+        <section id="impactos" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">8. Impactos e Consequências</h2>
+
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">8.1 Prejuízo ao FGC e Investidores</h3>
+
+                <div class="alert alert-info mb-4">
+                    <strong>FGC:</strong> Investidores com até R$ 250 mil em CDBs têm direito ao ressarcimento (teto
+                    global: R$ 1 milhão por CPF a cada 4 anos).
+                </div>
+
+                <p class="text-slate-300 mb-4"><strong class="text-red-400">RPPS afetados:</strong> Institutos de
+                    previdência de estados e municípios (MT, RJ) aplicaram recursos de aposentadoria em papéis do
+                    Master. Prejuízos superiores ao teto do FGC impactam contas públicas locais.</p>
+            </div>
+
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">8.2 Danos à Credibilidade do Sistema</h3>
+
+                <ul class="text-slate-300 space-y-3">
+                    <li>• <strong class="text-yellow-400">Crise de confiança:</strong> Banco operou por anos com
+                        balanços fraudados sob supervisão</li>
+                    <li>• <strong class="text-yellow-400">Failure de rating:</strong> Fitch havia elevado nota do Master
+                        meses antes da quebra</li>
+                    <li>• <strong class="text-yellow-400">Revisão regulatória:</strong> Esperada reforma na regulação de
+                        FIDCs pela CVM e processos de cessão de crédito pelo BC</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 9: CONCLUSÃO -->
+        <section id="conclusao" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-purple-400">9. Conclusão</h2>
+
+            <div class="glass-card p-8 mb-8">
+                <p class="text-slate-300 mb-4">O Caso Banco Master é um paradigma de <strong
+                        class="text-white">criminalidade corporativa sistêmica</strong>. A gestão de Daniel Vorcaro
+                    utilizou-se da complexidade do sistema financeiro moderno para construir um esquema de pirâmide
+                    lastreado em ativos fictícios e lavagem de dinheiro.</p>
+
+                <h3 class="text-xl font-semibold mb-4 mt-6 text-red-400">O Tripé Criminoso:</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">🏭</div>
+                        <div class="font-semibold">Fraude Operacional</div>
+                        <div class="text-sm text-slate-400">Fábrica de créditos falsos (Tirreno/Cartos)</div>
+                    </div>
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">📊</div>
+                        <div class="font-semibold">Fraude Contábil</div>
+                        <div class="text-sm text-slate-400">FIDCs da Reag para inflar ativos</div>
+                    </div>
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-center">
+                        <div class="text-2xl mb-2">🏛️</div>
+                        <div class="font-semibold">Captura Institucional</div>
+                        <div class="text-sm text-slate-400">Cooptação do BRB e uso do Judiciário</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela Resumo -->
+            <div class="glass-card p-8 mb-8 overflow-x-auto">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">Tabela Resumo: Principais Entidades</h3>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Entidade / Pessoa</th>
+                            <th>Função no Esquema</th>
+                            <th>Situação (Jan/2026)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold">Banco Master</td>
+                            <td>Emissor de CDBs e centralizador da fraude</td>
+                            <td class="text-red-400">Liquidação Extrajudicial</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Daniel Vorcaro</td>
+                            <td>Controlador e mentor da estratégia</td>
+                            <td class="text-yellow-400">Sob medidas cautelares (tornozeleira)</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Tirreno Consultoria</td>
+                            <td>"Fábrica" de créditos consignados falsos</td>
+                            <td class="text-yellow-400">Investigada por fraude</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">BRB</td>
+                            <td>Comprador de créditos podres (funding)</td>
+                            <td class="text-red-400">Ex-presidente afastado; prejuízo bilionário</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Reag DTVM</td>
+                            <td>Gestora dos fundos usados na lavagem</td>
+                            <td class="text-yellow-400">Investigada nas operações</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Fundo Astralo 95</td>
+                            <td>Veículo para girar ativos e lavar dinheiro</td>
+                            <td class="text-red-400">Elo com PCC identificado</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Will Bank</td>
+                            <td>Braço digital do Master (~9 milhões de clientes)</td>
+                            <td class="text-red-400">Liquidação em 21/jan/2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Referências (Collapsible) -->
+            <div class="glass-card p-8">
+                <div class="collapsible-header">
+                    <h3 class="text-xl font-semibold text-slate-200">📚 Referências Citadas</h3>
+                    <span class="collapse-icon text-purple-400 text-2xl">+</span>
+                </div>
+                <div class="collapsible-content">
+                    <ol class="text-slate-400 text-sm space-y-2 mt-4 list-decimal list-inside">
+                        <li><a href="https://jornalgrandebahia.com.br/2026/01/caso-banco-master-investigacao-sobre-fraude-bilionaria-se-expande-ao-stf-tcu-e-envolve-autoridades-empresarios-e-influenciadores/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Jornal Grande Bahia -
+                                Caso Banco Master: investigação sobre fraude bilionária</a></li>
+                        <li><a href="https://pactu.org.br/index.php/materia/14346-a-nova-leva-de-investigacoes-do-bc-contra-o-banco-master/completo"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Sindicatos Pactu - A
+                                nova leva de investigações do BC contra o Banco Master</a></li>
+                        <li><a href="https://g1.globo.com/politica/noticia/2026/01/09/quatro-fundos-investigados-por-ligacao-com-o-crime-organizado-aparecem-em-suspeita-de-fraude-do-banco-master.ghtml"
+                                target="_blank" class="hover:text-purple-400 transition-colors">G1 - Fraude no Banco
+                                Master: Fundos ligados ao crime são investigados</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=w-QiW22uRGg" target="_blank"
+                                class="hover:text-purple-400 transition-colors">YouTube - THE MOST CONTROVERSIAL BANK IN
+                                BRAZIL?</a></li>
+                        <li><a href="https://g1.globo.com/politica/noticia/2026/01/03/veja-quem-e-quem-no-caso-do-banco-master-e-o-papel-de-cada-instituicao.ghtml"
+                                target="_blank" class="hover:text-purple-400 transition-colors">G1 - Veja quem é quem no
+                                caso do Banco Master</a></li>
+                        <li><a href="https://revistacobertura.com.br/noticias/servicos-financeiros/banco-master-chega-ao-mercado-como-banco-completo-para-atender-a-diversos-segmentos/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Revista Cobertura -
+                                Banco Master chega ao mercado</a></li>
+                        <li><a href="https://revistaoeste.com/revista/edicao-301/anatomia-de-uma-fraude/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Revista Oeste - Anatomia
+                                de uma fraude</a></li>
+                        <li><a href="https://www.brasilparalelo.com.br/noticias/quem-e-daniel-vorcaro-conheca-o-dono-do-banco-master-preso-pela-policia-federal"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Brasil Paralelo - Quem é
+                                Daniel Vorcaro?</a></li>
+                        <li><a href="https://www.bloomberglinea.com.br/negocios/de-forasteiro-na-elite-financeira-a-presidiario-a-derrocada-de-daniel-vorcaro/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Bloomberg Línea - De
+                                'forasteiro' na elite financeira a presidiário</a></li>
+                        <li><a href="https://investnews.com.br/negocios/banco-maxima-muda-nome-para-master-e-busca-pulverizar-servicos-financeiros/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">InvestNews - Banco
+                                Máxima muda nome para Master</a></li>
+                        <li><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/apos-mudanca-societaria-e-aporte-de-r-400-mi-banco-maxima-agora-e-banco-master/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">CNN Brasil - Banco
+                                Máxima agora é Banco Master</a></li>
+                        <li><a href="https://pt.wikipedia.org/wiki/Banco_Master" target="_blank"
+                                class="hover:text-purple-400 transition-colors">Wikipedia - Banco Master</a></li>
+                        <li><a href="https://www.poder360.com.br/poder-economia/tcu-suspende-inspecao-no-bc-e-leva-caso-do-banco-master-ao-plenario/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Poder360 - TCU suspende
+                                inspeção no BC</a></li>
+                        <li><a href="https://www.poder360.com.br/poder-economia/bc-desconhece-fabrica-de-creditos-falsos-no-sistema-financeiro/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Poder360 - BC desconhece
+                                fábrica de créditos falsos</a></li>
+                        <li><a href="https://sinpaigmt.org.br/sem-categoria/liquidacao-do-banco-master-entenda-o-caso-e-os-convenios-da-instituicao-em-mato-grosso/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Sinpaig MT - Liquidação
+                                do Banco Master</a></li>
+                        <li><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2025-12/dono-do-banco-master-e-ex-presidente-do-brb-depoem-pf-nesta-terca"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Agência Brasil - Dono do
+                                Banco Master e ex-presidente do BRB depõem</a></li>
+                        <li><a href="https://investidor10.com.br/noticias/fim-da-novela-brb-abandona-disputa-apos-compra-do-banco-master-ser-vetada-115269/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Investidor10 - BRB
+                                abandona disputa após compra vetada</a></li>
+                        <li><a href="https://www1.folha.uol.com.br/mercado/2026/01/seis-fundos-investigados-no-caso-master-tem-ligacao-com-operacao-que-mirou-pcc.shtml"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Folha de S.Paulo - Seis
+                                fundos investigados têm ligação com PCC</a></li>
+                        <li><a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Gov.br - Operação
+                                Carbono Oculto</a></li>
+                        <li><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2025-12/toffoli-marca-acareacao-com-investigados-no-caso-banco-master"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Agência Brasil - Toffoli
+                                marca acareação</a></li>
+                        <li><a href="https://www.cnnbrasil.com.br/economia/mercado/caso-banco-master-entenda-o-que-ja-aconteceu-ate-agora/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">CNN Brasil - Caso Banco
+                                Master: entenda o que já aconteceu</a></li>
+                        <li><a href="https://noticias.r7.com/brasilia/justica-manda-soltar-daniel-vorcaro-mas-impoe-tornozeleira-eletronica-28112025/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">R7 - Justiça manda
+                                soltar Daniel Vorcaro</a></li>
+                        <li><a href="https://www.migalhas.com.br/quentes/445575/trf-1-julgara-pedido-do-mpf-para-restabelecer-prisao-de-daniel-vorcaro"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Migalhas - TRF-1 julgará
+                                pedido do MPF</a></li>
+                        <li><a href="https://revistaoeste.com/economia/daniel-vorcaro-mobiliza-cinco-escritorios-de-advocacia-e-estrategias-agressivas-de-defesa/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Revista Oeste - Daniel
+                                Vorcaro mobiliza cinco escritórios</a></li>
+                        <li><a href="https://veja.abril.com.br/politica/em-meio-a-desgaste-tcu-consolida-suspeita-de-acao-politica-para-ressuscitar-banco-master/"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Veja - TCU recua após
+                                reação do mercado</a></li>
+                        <li><a href="https://www.jornaldotocantins.com.br/economia/entenda-o-caso-do-banco-master-e-veja-quem-s-o-os-envolvidos-1.3359156"
+                                target="_blank" class="hover:text-purple-400 transition-colors">Jornal do Tocantins -
+                                Entenda o caso do Banco Master</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="text-center mt-12 text-slate-500 text-sm">
+                <p>Este relatório consolida informações disponíveis até 28 de janeiro de 2026.</p>
+                <p class="mt-2">Baseado em dados públicos, relatórios do Banco Central e apurações jornalísticas.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
