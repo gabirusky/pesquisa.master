@@ -9,6 +9,7 @@
         content="Análise completa do caso Banco Master: fraude bilionária, engenharia financeira ilícita e impacto no sistema financeiro brasileiro.">
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -213,6 +214,52 @@
                 <div class="alert alert-danger">
                     <strong>Fraude contábil:</strong> Investigações apontaram que esses lucros eram derivados da
                     superavaliação de ativos ilíquidos e contabilização de carteiras de crédito fabricadas.
+                </div>
+            </div>
+
+            <!-- CHARTS SECTION: Visualização do Crescimento -->
+            <div class="glass-card p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-slate-200">📊 Visualização do Crescimento Artificial</h3>
+                <p class="text-slate-300 mb-6">Os gráficos abaixo demonstram o crescimento exponencial e insustentável
+                    do Banco Master entre 2020 e 2024, baseados em dados públicos do Banco Central:</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Chart 1: Ativos Totais -->
+                    <div class="bg-slate-800/50 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-purple-400 mb-4 text-center">Evolução dos Ativos Totais
+                        </h4>
+                        <canvas id="chartAtivos"></canvas>
+                        <p class="text-xs text-slate-500 mt-2 text-center">Crescimento de 827% em 4 anos</p>
+                    </div>
+
+                    <!-- Chart 2: Captações -->
+                    <div class="bg-slate-800/50 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-blue-400 mb-4 text-center">Evolução das Captações</h4>
+                        <canvas id="chartCaptacoes"></canvas>
+                        <p class="text-xs text-slate-500 mt-2 text-center">Depósitos + Títulos Emitidos</p>
+                    </div>
+
+                    <!-- Chart 3: Lucro Líquido -->
+                    <div class="bg-slate-800/50 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-4 text-center">Evolução do Lucro Líquido</h4>
+                        <canvas id="chartLucro"></canvas>
+                        <p class="text-xs text-slate-500 mt-2 text-center">Lucros "fabricados" via ativos superavaliados
+                        </p>
+                    </div>
+
+                    <!-- Chart 4: Patrimônio Líquido -->
+                    <div class="bg-slate-800/50 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-yellow-400 mb-4 text-center">Evolução do Patrimônio
+                            Líquido</h4>
+                        <canvas id="chartPatrimonio"></canvas>
+                        <p class="text-xs text-slate-500 mt-2 text-center">Crescimento de 283% entre 2022-2024</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-6">
+                    <strong>Fonte:</strong> Dados extraídos do <a href="https://bancodata.com.br/relatorio/master"
+                        target="_blank" class="text-purple-400 hover:underline">BancoData - Relatório Banco Master</a>,
+                    baseado em informações públicas do Banco Central do Brasil.
                 </div>
             </div>
 
@@ -677,9 +724,17 @@
                                 Operação Compliance Zero: recuperação de ativos (14/jan/2026)</a></li>
                     </ol>
 
+                    <!-- Fontes de Dados Financeiros -->
+                    <h4 class="text-lg font-semibold text-purple-400 mt-6 mb-2">— Fontes de Dados Financeiros</h4>
+                    <ol class="text-slate-400 text-sm space-y-2 list-decimal list-inside" start="7">
+                        <li><a href="https://bancodata.com.br/relatorio/master" target="_blank"
+                                class="hover:text-purple-400 transition-colors">BancoData - Relatório Banco Master:
+                                Dados históricos do Banco Central (Patrimônio, Ativos, Captações, Lucros)</a></li>
+                    </ol>
+
                     <!-- Fontes Jornalísticas -->
                     <h4 class="text-lg font-semibold text-purple-400 mt-6 mb-2">— Fontes Jornalísticas</h4>
-                    <ol class="text-slate-400 text-sm space-y-2 list-decimal list-inside" start="7">
+                    <ol class="text-slate-400 text-sm space-y-2 list-decimal list-inside" start="8">
                         <li><a href="https://jornalgrandebahia.com.br/2026/01/caso-banco-master-investigacao-sobre-fraude-bilionaria-se-expande-ao-stf-tcu-e-envolve-autoridades-empresarios-e-influenciadores/"
                                 target="_blank" class="hover:text-purple-400 transition-colors">Jornal Grande Bahia -
                                 Caso Banco Master: investigação sobre fraude bilionária</a></li>

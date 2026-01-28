@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initFloatingNav();
   initCollapsibles();
+  initCharts();
 });
 
 // Progress Bar
@@ -101,4 +102,155 @@ function animateValue(element, start, end, duration) {
     }
   };
   window.requestAnimationFrame(step);
+}
+
+// Financial Charts - Banco Master Growth Data
+function initCharts() {
+  // Check if Chart.js is loaded and canvas elements exist
+  if (typeof Chart === 'undefined') return;
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        backgroundColor: 'rgba(30, 41, 59, 0.95)',
+        titleColor: '#e2e8f0',
+        bodyColor: '#94a3b8',
+        borderColor: 'rgba(139, 92, 246, 0.5)',
+        borderWidth: 1,
+        padding: 12,
+        displayColors: false,
+        callbacks: {
+          label: function (context) {
+            return 'R$ ' + context.parsed.y.toLocaleString('pt-BR') + ' bi';
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: { color: '#94a3b8' },
+        grid: { color: 'rgba(148, 163, 184, 0.1)' }
+      },
+      y: {
+        ticks: {
+          color: '#94a3b8',
+          callback: function (value) {
+            return 'R$ ' + value + ' bi';
+          }
+        },
+        grid: { color: 'rgba(148, 163, 184, 0.1)' }
+      }
+    }
+  };
+
+  // Chart 1: Ativos Totais (Total Assets)
+  const ctxAtivos = document.getElementById('chartAtivos');
+  if (ctxAtivos) {
+    new Chart(ctxAtivos, {
+      type: 'bar',
+      data: {
+        labels: ['Dez/2020', 'Dez/2021', 'Dez/2022', 'Dez/2023', 'Jun/2024'],
+        datasets: [{
+          data: [6.2, 10.5, 20.8, 36.8, 57.2],
+          backgroundColor: [
+            'rgba(139, 92, 246, 0.6)',
+            'rgba(139, 92, 246, 0.7)',
+            'rgba(139, 92, 246, 0.8)',
+            'rgba(139, 92, 246, 0.9)',
+            'rgba(239, 68, 68, 1)'
+          ],
+          borderColor: 'rgba(139, 92, 246, 1)',
+          borderWidth: 1,
+          borderRadius: 6
+        }]
+      },
+      options: chartOptions
+    });
+  }
+
+  // Chart 2: Captações (Deposits/Funding)
+  const ctxCaptacoes = document.getElementById('chartCaptacoes');
+  if (ctxCaptacoes) {
+    new Chart(ctxCaptacoes, {
+      type: 'line',
+      data: {
+        labels: ['Dez/2020', 'Dez/2021', 'Dez/2022', 'Dez/2023', 'Jun/2024'],
+        datasets: [{
+          data: [5.1, 9.0, 18.3, 32.6, 49.5],
+          borderColor: 'rgba(59, 130, 246, 1)',
+          backgroundColor: 'rgba(59, 130, 246, 0.2)',
+          fill: true,
+          tension: 0.4,
+          pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+          pointBorderColor: '#fff',
+          pointRadius: 5,
+          pointHoverRadius: 8
+        }]
+      },
+      options: chartOptions
+    });
+  }
+
+  // Chart 3: Lucro Líquido (Net Profit) - in millions
+  const ctxLucro = document.getElementById('chartLucro');
+  if (ctxLucro) {
+    const lucroOptions = JSON.parse(JSON.stringify(chartOptions));
+    lucroOptions.scales.y.ticks.callback = function (value) {
+      return 'R$ ' + value + ' mi';
+    };
+    lucroOptions.plugins.tooltip.callbacks = {
+      label: function (context) {
+        return 'R$ ' + context.parsed.y.toLocaleString('pt-BR') + ' milhões';
+      }
+    };
+
+    new Chart(ctxLucro, {
+      type: 'bar',
+      data: {
+        labels: ['2020', '2021', '2022', '2023', '2024*'],
+        datasets: [{
+          data: [70, 138, 211, 532, 433],
+          backgroundColor: [
+            'rgba(34, 197, 94, 0.6)',
+            'rgba(34, 197, 94, 0.7)',
+            'rgba(34, 197, 94, 0.8)',
+            'rgba(34, 197, 94, 0.9)',
+            'rgba(234, 179, 8, 0.9)'
+          ],
+          borderColor: 'rgba(34, 197, 94, 1)',
+          borderWidth: 1,
+          borderRadius: 6
+        }]
+      },
+      options: lucroOptions
+    });
+  }
+
+  // Chart 4: Patrimônio Líquido (Net Equity)
+  const ctxPatrimonio = document.getElementById('chartPatrimonio');
+  if (ctxPatrimonio) {
+    new Chart(ctxPatrimonio, {
+      type: 'line',
+      data: {
+        labels: ['Jun/2022', 'Dez/2022', 'Jun/2023', 'Dez/2023', 'Jun/2024'],
+        datasets: [{
+          data: [1.2, 1.7, 2.2, 2.8, 4.6],
+          borderColor: 'rgba(234, 179, 8, 1)',
+          backgroundColor: 'rgba(234, 179, 8, 0.2)',
+          fill: true,
+          tension: 0.4,
+          pointBackgroundColor: 'rgba(234, 179, 8, 1)',
+          pointBorderColor: '#fff',
+          pointRadius: 5,
+          pointHoverRadius: 8
+        }]
+      },
+      options: chartOptions
+    });
+  }
 }
