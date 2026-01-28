@@ -246,6 +246,20 @@ section.visible {
   border-left: 4px solid var(--accent-blue);
 }
 
+/* Chart Container Styles */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.chart-container canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .floating-nav {
@@ -258,6 +272,31 @@ section.visible {
 
   .stat-value {
     font-size: 1.5rem;
+  }
+
+  /* Charts responsiveness */
+  .chart-container {
+    padding: 8px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chart-container canvas {
+    width: 100% !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Reduce gap between chart cards on mobile */
+  .grid.gap-8 {
+    gap: 1rem;
+  }
+
+  /* Adjust chart card padding on mobile */
+  .chart-container.p-6 {
+    padding: 1rem;
   }
 }
 
